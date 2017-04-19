@@ -38,7 +38,8 @@ module.exports = function(app) {
 
     app.post('/api/addPair', function(req, res) {
         var query = req.query;
-        query.entity1.split(' ').join('_');
+        query.entity1 = query.entity1.split(' ').join('_');
+        query.entity2 = query.entity2.split(' ').join('_');
         var filename = "";
         if (query.entity1.localeCompare(query.entity2) < 0) {
             filename = query.entity1 + "_" + query.entity2;
@@ -48,15 +49,16 @@ module.exports = function(app) {
         var pathname = 'data/pairs/' + filename + '.json';
         jsonfile.readFile(pathname, function(err, data) {
             if (err) {
-                fs.writeFileSync(pathname, {}, function(err) {
-                    if (err) {
-                        console.log(err);
+                fs.writeFileSync(pathname, JSON.stringify({}), function(error) {
+                    if (error) {
+                        console.log(error);
                     }
-                    console.log("The file was saved!");
-                    data = {};
                 });
+                console.log("The file was saved!");
+                data = {};
             }
-            obj = JSON.parse(data);
+            // obj = JSON.parse(data);
+            obj = data;
             if (obj.hasOwnProperty('sentences')) {
                 var sentencePair = {};
                 sentencePair['heading1'] = query.heading1;
@@ -88,27 +90,32 @@ module.exports = function(app) {
 
     app.post('/api/updateComparable', function(req, res) {
         var query = req.query;
-        query.entity1.split(' ').join('_');
+        query.entity1 = query.entity1.split(' ').join('_');
+        query.entity2 = query.entity2.split(' ').join('_');
         var filename = "";
         if (query.entity1.localeCompare(query.entity2) < 0) {
             filename = query.entity1 + "_" + query.entity2;
         } else {
             filename = query.entity2 + "_" + query.entity1;
         }
+        console.log(filename);
         var pathname = 'data/pairs/' + filename + '.json';
         jsonfile.readFile(pathname, function(err, data) {
             if (err) {
-                fs.writeFileSync(pathname, {}, function(err) {
-                    if (err) {
-                        console.log(err);
+                console.log(err);
+                fs.writeFileSync(pathname, JSON.stringify({}), function(error) {
+                    if (error) {
+                        console.log(error);
                     }
-                    console.log("The file was saved!");
-                    data = {};
                 });
+                console.log("The file was saved!");
+                data = {};
             }
-            obj = JSON.parse(data);
+            console.log(data);
+            // obj = JSON.parse(data);
+            obj = data;
             if (obj.hasOwnProperty('comparable')) {
-                if (query.answer == 0) {
+                if (query.comparable == '0') {
                     obj.comparable = obj.comparable - 1;
                 } else {
                     obj.comparable = obj.comparable + 1;
@@ -120,7 +127,7 @@ module.exports = function(app) {
                 var temp = {};
                 temp['entity1'] = query.entity1;
                 temp['entity2'] = query.entity2;
-                if (query.answer == 0) {
+                if (query.comparable == '0') {
                     temp['comparable'] = -1;
                 } else {
                     temp['comparable'] = 1;
