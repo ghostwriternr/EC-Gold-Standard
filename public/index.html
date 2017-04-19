@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html ng-app="ec">
+
+<head>
+    <title>Entity Comparison</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.js"></script>
+    <script type="text/javascript" src="js/controllers/mainController.js"></script>
+    <script type="text/javascript" src="js/core.js"></script>
+</head>
+
+<body ng-controller="mainController">
+    <nav class="navbar navbar-inverse" role="navigation">
+        <a class="navbar-brand" href="#">Data creation for Entity Comparison</a>
+    </nav>
+    <div class="container-fluid text-center" style="margin-bottom: 100px;">
+        <div class="row">
+            <div class="col-xs-6 text-center">
+                <select ng-model="firstSelected" ng-options="item for item in allList">
+                    <option value="">---Please select---</option>
+                </select>
+            </div>
+            <div class="col-xs-6 text-center">
+                <select ng-model="secondSelected" ng-options="item for item in allList">
+                    <option value="">---Please select---</option>
+                </select>
+            </div>
+        </div>
+        <div ng-show="firstSelected.length>0&&secondSelected.length>0">
+            <h3>According to you, is the selected pair comparable?</h3>
+            <div class="row">
+                <div class="col-xs-3 col-xs-offset-3">
+                    <button class="btn btn-success btn-block" type="button">Yes</button>
+                </div>
+                <div class="col-xs-3">
+                    <button class="btn btn-danger btn-block" type="button">No</button>
+                </div>
+            </div>
+        </div>
+        <div ng-show="firstSelected.length>0&&secondSelected.length>0">
+            <h3>Here are a few pairs of paragraphs we think are comparable</h3>
+            <h4>Please help us by highlighting and then adding pairs of sentences from these paragraphs that you feel are comparable.</h4>
+            <hr/>
+            <div ng-repeat="pair in paragraphs.Pairs">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <h4>{{pair.second.title}}</h4>
+                        <p class="text-justify" ng-mouseup="showSelectedText1()">{{pair.second.content}}</p>
+                    </div>
+                    <div class="col-xs-6">
+                        <h4>{{pair.first.title}}</h4>
+                        <p class="text-justify" ng-mouseup="showSelectedText2()">{{pair.first.content}}</p>
+                    </div>
+                </div>
+                <hr/>
+            </div>
+        </div>
+        <div class="floating">
+            <div class="row" ng-show="selectedText1.length>0&&selectedText2.length>0" style="margin-bottom: 10px;font-weight: bold;">
+                <div class="col-xs-12">
+                    <button class="btn btn-warning btn-block" type="button" ng-click="addPair()">Add pair as comparable</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="toAdd">
+                        <p>{{selectedText1}}</p>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="toAdd">
+                        <p>{{selectedText2}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    function openModal() {
+        $('#myModal').modal('show');
+    }
+
+    function closeModal() {
+        $('#myModal').modal('hide');
+    }
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+
+</html>

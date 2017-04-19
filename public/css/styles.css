@@ -1,0 +1,60 @@
+html,
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #ddd;
+}
+
+.vertical-center {
+    min-height: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.modal {
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .modal:before {
+        display: inline-block;
+        vertical-align: middle;
+        content: " ";
+        height: 100%;
+    }
+}
+
+.modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.toAdd {
+    background-color: #4e4eff;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navbar-brand {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    text-align: center;
+    margin: auto;
+}
+
+.navbar-toggle {
+    z-index: 3;
+}
+
+.floating {
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+    padding-right: 30px;
+}
