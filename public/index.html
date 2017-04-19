@@ -34,10 +34,10 @@
             <h3>According to you, is the selected pair comparable?</h3>
             <div class="row">
                 <div class="col-xs-3 col-xs-offset-3">
-                    <button class="btn btn-success btn-block" type="button">Yes</button>
+                    <button class="btn btn-success btn-block" type="button" ng-click="addComparable(1)">Yes</button>
                 </div>
                 <div class="col-xs-3">
-                    <button class="btn btn-danger btn-block" type="button">No</button>
+                    <button class="btn btn-danger btn-block" type="button" ng-click="addComparable(0)">No</button>
                 </div>
             </div>
         </div>
@@ -45,15 +45,15 @@
             <h3>Here are a few pairs of paragraphs we think are comparable</h3>
             <h4>Please help us by highlighting and then adding pairs of sentences from these paragraphs that you feel are comparable.</h4>
             <hr/>
-            <div ng-repeat="pair in paragraphs.Pairs">
+            <div ng-repeat="pair in paragraphs.Pairs track by $index">
                 <div class="row">
                     <div class="col-xs-6">
                         <h4>{{pair.second.title}}</h4>
-                        <p class="text-justify" ng-mouseup="showSelectedText1()">{{pair.second.content}}</p>
+                        <p class="text-justify" ng-mouseup="showSelectedText1($index)">{{pair.second.content}}</p>
                     </div>
                     <div class="col-xs-6">
                         <h4>{{pair.first.title}}</h4>
-                        <p class="text-justify" ng-mouseup="showSelectedText2()">{{pair.first.content}}</p>
+                        <p class="text-justify" ng-mouseup="showSelectedText2($index)">{{pair.first.content}}</p>
                     </div>
                 </div>
                 <hr/>

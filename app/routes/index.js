@@ -1,6 +1,7 @@
 var path = require('path');
 var fs = require('fs');
 var PythonShell = require('python-shell');
+var jsonfile = require('jsonfile');
 
 module.exports = function(app) {
     app.get('/api/getList', function(req, res) {
@@ -30,8 +31,105 @@ module.exports = function(app) {
         };
         PythonShell.run('wordnet.py', options, function(err, results) {
             if (err) throw err;
-            console.log('results: %j', results);
+            // console.log('results: %j', results);
             res.send(results[0]);
+        });
+    });
+
+    app.post('/api/addPair', function(req, res) {
+        var query = req.query;
+        query.entity1.split(' ').join('_');
+        var filename = "";
+        if (query.entity1.localeCompare(query.entity2) < 0) {
+            filename = query.entity1 + "_" + query.entity2;
+        } else {
+            filename = query.entity2 + "_" + query.entity1;
+        }
+        var pathname = 'data/pairs/' + filename + '.json';
+        jsonfile.readFile(pathname, function(err, data) {
+            if (err) {
+                fs.writeFileSync(pathname, {}, function(err) {
+                    if (err) {
+                        console.log(err);
+                    }
+                    console.log("The file was saved!");
+                    data = {};
+                });
+            }
+            obj = JSON.parse(data);
+            if (obj.hasOwnProperty('sentences')) {
+                var sentencePair = {};
+                sentencePair['heading1'] = query.heading1;
+                sentencePair['heading2'] = query.heading2;
+                sentencePair['sentence1'] = query.sentence1;
+                sentencePair['sentence2'] = query.sentence2;
+                obj['sentences'].push(sentencePair);
+                jsonfile.writeFile(pathname, obj, function(err) {
+                    console.error(err);
+                });
+            } else {
+                var temp = {};
+                temp['entity1'] = query.entity1;
+                temp['entity2'] = query.entity2;
+                temp['comparable'] = 0;
+                temp['sentences'] = [];
+                var sentencePair = {};
+                sentencePair['heading1'] = query.heading1;
+                sentencePair['heading2'] = query.heading2;
+                sentencePair['sentence1'] = query.sentence1;
+                sentencePair['sentence2'] = query.sentence2;
+                temp['sentences'].push(sentencePair);
+                jsonfile.writeFile(pathname, temp, function(err) {
+                    console.error(err);
+                });
+            }
+        });
+    });
+
+    app.post('/api/updateComparable', function(req, res) {
+        var query = req.query;
+        query.entity1.split(' ').join('_');
+        var filename = "";
+        if (query.entity1.localeCompare(query.entity2) < 0) {
+            filename = query.entity1 + "_" + query.entity2;
+        } else {
+            filename = query.entity2 + "_" + query.entity1;
+        }
+        var pathname = 'data/pairs/' + filename + '.json';
+        jsonfile.readFile(pathname, function(err, data) {
+            if (err) {
+                fs.writeFileSync(pathname, {}, function(err) {
+                    if (err) {
+                        console.log(err);
+                    }
+                    console.log("The file was saved!");
+                    data = {};
+                });
+            }
+            obj = JSON.parse(data);
+            if (obj.hasOwnProperty('comparable')) {
+                if (query.answer == 0) {
+                    obj.comparable = obj.comparable - 1;
+                } else {
+                    obj.comparable = obj.comparable + 1;
+                }
+                jsonfile.writeFile(pathname, obj, function(err) {
+                    console.error(err);
+                });
+            } else {
+                var temp = {};
+                temp['entity1'] = query.entity1;
+                temp['entity2'] = query.entity2;
+                if (query.answer == 0) {
+                    temp['comparable'] = -1;
+                } else {
+                    temp['comparable'] = 1;
+                }
+                temp['sentences'] = [];
+                jsonfile.writeFile(pathname, temp, function(err) {
+                    console.error(err);
+                });
+            }
         });
     });
 

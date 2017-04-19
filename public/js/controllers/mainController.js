@@ -38,7 +38,8 @@ angular.module('mainCtrl', [])
                 });
         };
 
-        $scope.showSelectedText1 = function() {
+        $scope.showSelectedText1 = function(index) {
+            $scope.index1 = index;
             $scope.selectedText1 = $scope.getSelectionText1();
         };
         $scope.getSelectionText1 = function() {
@@ -51,7 +52,8 @@ angular.module('mainCtrl', [])
             console.log(text);
             return text;
         };
-        $scope.showSelectedText2 = function() {
+        $scope.showSelectedText2 = function(index) {
+            $scope.index2 = index;
             $scope.selectedText2 = $scope.getSelectionText2();
         };
         $scope.getSelectionText2 = function() {
@@ -70,14 +72,35 @@ angular.module('mainCtrl', [])
                     url: '/api/addPair',
                     method: 'POST',
                     params: {
-                        
+                        entity1: $scope.firstSelected,
+                        entity2: $scope.secondSelected,
+                        heading1: $scope.paragraphs.Pairs[$scope.index1]['second']['title'],
+                        heading2: $scope.paragraphs.Pairs[$scope.index2]['first']['title'],
+                        sentence1: $scope.selectedText1,
+                        sentence2: $scope.selectedText2
                     }
                 })
                 .then(function locationSuccessCallback(response) {
                     console.log(response);
-                    $scope.allList = response.data;
                 }, function locationErrorCallback(response) {
                     console.log(response);
                 });
-        }
+        };
+
+        $scope.addComparable = function(answer) {
+            $http({
+                    url: '/api/updateComparable',
+                    method: 'POST',
+                    params: {
+                        entity1: $scope.firstSelected,
+                        entity2: $scope.secondSelected,
+                        comparable: answer
+                    }
+                })
+                .then(function locationSuccessCallback(response) {
+                    console.log(response);
+                }, function locationErrorCallback(response) {
+                    console.log(response);
+                });
+        };
     }]);
