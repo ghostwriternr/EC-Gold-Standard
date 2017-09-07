@@ -85,6 +85,9 @@ angular.module('mainCtrl', [])
                 }, function locationErrorCallback(response) {
                     console.log(response);
                 });
+            $scope.selectedText1 = null;
+            $scope.selectedText2 = null;
+            openSuccess();
         };
 
         $scope.addComparable = function(answer) {
@@ -102,5 +105,6 @@ angular.module('mainCtrl', [])
                 }, function locationErrorCallback(response) {
                     console.log(response);
                 });
+            openSuccess();
         };
     }]);

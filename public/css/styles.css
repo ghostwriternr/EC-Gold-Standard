@@ -58,3 +58,11 @@ body {
     width: 100%;
     padding-right: 30px;
 }
+
+.success-message {
+    position: fixed;
+    top: 10px;
+    right: 0;
+    width: 30vw;
+    margin: 10px;
+}
