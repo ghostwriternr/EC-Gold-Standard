@@ -27,6 +27,7 @@ module.exports = function(app) {
         var options = {
             mode: 'json',
             scriptPath: 'scripts/',
+            pythonPath: '/usr/bin/python3',
             args: [query['first'].split(' ').join('_'), query['second'].split(' ').join('_')]
         };
         PythonShell.run('wordnet.py', options, function(err, results) {
@@ -49,6 +50,7 @@ module.exports = function(app) {
         var pathname = 'data/pairs/' + filename + '.json';
         jsonfile.readFile(pathname, function(err, data) {
             if (err) {
+		console.log(pathname, filename);
                 fs.writeFileSync(pathname, JSON.stringify({}), function(error) {
                     if (error) {
                         console.log(error);
