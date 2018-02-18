@@ -23,8 +23,8 @@ def getcooccurence(str1, str2, sentence_list, scores):
         if str1 in sentence and str2 in sentence:
             scores['both'] += 1
 
-def calculatepmi(scores):
-    return log(scores['both']/(scores['first']*scores['second']))
+def calculatepmi(scores, total_sentences):
+    return log((scores['both']*total_sentences)/(scores['first']*scores['second']))
 
 def getpmi(str1, str2):
     scores = {
@@ -32,14 +32,16 @@ def getpmi(str1, str2):
         'first': 0,
         'second': 0
     }
+    total_sentences = 0
     for directory in DIRECTORIES:
         for file in os.listdir(directory):
             if file.endswith(".json"):
                 with open(os.path.join(directory, file)) as data_file:
                     data = json.load(data_file)
                 sentence_list = split_sentences(data)
+                total_sentences += len(sentence_list)
                 getcooccurence(str1, str2, sentence_list, scores)
-    return calculatepmi(scores)
+    return calculatepmi(scores, total_sentences)
 
 def main():
     print(getpmi('the', 'a'))
