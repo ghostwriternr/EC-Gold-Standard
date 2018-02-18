@@ -1,1 +1,112 @@
-/home/ghost_000/mtp/testMod.txt
+snakes
+carnivorous
+eating small animals including lizards, frogs, other snakes, small mammals, birds, eggs, fish, snails or insects.
+spiders
+regarded as predatory
+Bagheera kiplingi gets over 90% of its food from fairly solid plant material produced by acacias as part of a mutually beneficial relations$
+0
+owls
+carnivorous
+live mainly on a diet of insects and small rodents such as mice, rats, and hares.
+snakes
+carnivorous
+eating small animals including lizards, frogs, other snakes, small mammals, birds, eggs, fish, snails or insects.
+1
+gray wolf
+social animal
+social unit consists of a mated pair, accompanied by the pair's adult offspring
+coyote
+social unit
+family containing a reproductive female.
+1
+snakes
+carnivorous
+eating small animals including lizards, frogs, other snakes, small mammals, birds, eggs, fish, snails or insects.
+snakes
+carnivorous
+eating small animals including lizards, frogs, other snakes, small mammals, birds, eggs, fish, snails or insects.
+0
+Cats
+domesticated
+in major parts of the world.
+Cats 
+domesticated
+in major parts of the world.
+0
+Dogs
+domesticated
+in major parts of the world.
+Cats
+domesticated
+in major parts of the world.
+1
+baboons
+live
+hierarchical troops
+Gorillas
+live
+groups called troops.
+1
+bear
+principal range
+parts of Russia, Central Asia, China, Canada, the United States (mostly Alaska), Scandinavia, and the Carpathian region (especially Romania), Anatolia, and Caucasus.
+panda
+lives
+few mountain ranges in central China, mainly in Sichuan, but also in neighbouring Shaanxi and Gansu.
+1
+bear
+referred
+as the bruin, from Middle English.
+panda
+borrowed
+English from French, but no conclusive explanation of the origin of the French word panda has been found.
+0
+bear
+range
+it remains listed as a least concern species by the IUCN with a total population of approximately 200,000.
+panda
+threatened
+continued habitat loss and habitat fragmentation and by a very low birthrate, both in the wild and in captivity.
+0
+bears
+have
+large and curved claws, those present on the forelimbs being longer than those on the hind limbs.
+panda
+paw
+has a "thumb" and five fingers.
+1
+Females
+deliver
+single calf with gestation lasting about a year, dependency until one to two years, and maturity around seven to ten years, all varying between the species.
+dolphin
+gestation period
+this period is around 11 to 12 months, with for the orca the gestation period is around 17 months.
+1
+goats
+shapes and sizes
+naturally have two horns
+sheep
+color
+compared to wild ovines is their wide variation in color.
+0
+Skunk
+predators
+of the honeybee, relying on their thick fur to protect them from stings.
+sloths
+spend
+bulk of their time feeding on a single "modal" tree
+0
+Vultures
+attack
+rarely attack healthy animals, but may kill the wounded or sick.
+eagles
+living
+relatively arid regions still typically rely primarily on fish as prey.
+0
+Arctic wolf
+people
+can be coaxed to approach people in some areas.
+Arctic fox
+curls up
+tucking its legs and head under its body and behind its furry tail.
+0
