@@ -1,1 +1,301 @@
-/home/ghost_000/mtp/demo.txt
+cats
+lifespan
+1980s, it was about seven years, rising to 9.4 years in 1995 and 12–15 years in 2014.
+dogs
+lifespan
+the age at which half the dogs in a population have died and half are still alive, ranges from 10 to 13 years.
+0
+dogs
+physical and social evolution
+have acquired the ability to understand and communicate with humans, and they are uniquely attuned to our behaviors.
+they
+territory
+establish territories that vary considerably in size, in one study ranging from 7 to 28 hectares (17–69 acres).
+0
+dogs
+communicate
+how they understand messages that humans send to them, and how humans can translate the ideas that dogs are trying to transmit
+cats
+social behavior
+ranges from widely dispersed individuals to feral cat colonies that form around a food source, based on groups of co-operating females
+1
+dogs
+three-quarter of dog's population
+lives in the developing world as feral, village, or community dogs, with pet dogs uncommon.
+cats
+species
+and are found across much of the world.
+0
+Adult rhinoceros
+no real predators
+fall prey to big cats, crocodiles, wild dogs, and hyenas.
+adult elephants
+invulnerable to predators
+rare reports of adult elephants falling prey to tigers.
+1
+zebras
+breed
+until the age of five or six.
+sloths
+mate
+seasonally, while the maned sloth breeds at any time of year.
+1
+Whaling
+existed
+since the Stone Age.
+turtles
+are kept as pets.
+Among the most popular are Russian tortoises, spur-thighed tortoises, and red-eared sliders.
+0
+turtles
+communicating
+Tortoises may be vocal when courting and mating. 
+humpback whale
+communicate
+using melodic sounds, known as whale song. 
+1
+Turtles
+night vision
+nusually large number of rod cells in their retinas.
+whale
+eye
+yet they do retain a good degree of eyesight
+1
+whales
+carnivorous
+fish and cephalopods, and then followed by crustaceans and bivalves.
+turtle
+diet
+aquatic plants invertebrates such as insects, snails, and worms
+1
+sea eagle
+feeds
+river habitats are salmon (Oncorhynchus spp.) and trout.
+pigeons and doves
+diets
+Seeds and fruit
+1
+They
+legally protected
+classified as a National Treasure in Japan and mostly occurring in protected areas in Russia
+They
+extinct in the wild
+as is the Socorro dove of Socorro Island, Mexico, last seen in the wild in 1972,
+0
+red panda
+endemic
+temperate forests of the Himalayas, and ranges from the foothills of western Nepal to China in the east.
+Its
+habitat
+annual sea ice covering the waters over the continental shelf and the Arctic inter-island archipelagos.
+1
+polar bears
+territorial
+normally cautious in confrontations, and often choose to escape rather than fight.
+red panda
+territorial
+solitary except during mating season
+1
+polar bear
+carnivorous
+its diet primarily consists of ringed (Pusa hispida) and bearded seals (Erignathus barbatus)
+They
+eat
+mostly bamboo, and may eat small mammals, birds, eggs, flowers, and berries. birds, flowers, maple and mulberry leaves, and bark and fruits of maple, beech, and mulberry.
+1
+Red panda
+reproduce
+18 months of age, and are fully mature at two to three years. 
+polar bears
+mating
+take place on the sea ice in April and May
+0
+red panda
+listed in CITES Appendix I.
+classified as endangered in the IUCN Red List since 2008 because the global population is estimated at about 10,000 individuals, with a decreasing population trend
+polar bears
+global population
+22,000 to 31,000, and the current population trend is unknown
+0
+jaguar
+range
+Argentina, Belize, Bolivia, Colombia, Costa Rica (particularly on the Osa Peninsula), Ecuador, French Guiana, Guatemala, Guyana, Honduras, Nicaragua, Panama, Paraguay, Peru, Suriname, the United States and Venezuela.
+Leopards
+inhabited
+Africa, from mountainous forests to grasslands and savannahs, excluding only extremely sandy desert
+1
+jaguar
+apex predator
+exists at the top of its food chain and is not preyed on in the wild. 
+Leopard
+diet
+reptiles, and they will occasionally take domestic livestock when other food is scarce.
+0
+Jaguar
+populations
+Near Threatened by the International Union for Conservation of Nature (IUCN), meaning it may be threatened with extinction in the near future.
+leopards
+threats
+habitat conversion and intense persecution,
+1
+gray wolf
+behavior
+as necessitated by its group living and hunting habits.
+cotoye
+visual and vocal
+gregarious and solitary animal
+0
+wolves
+huting
+moose, bison and muskoxen unaided
+coyote
+hunting
+works in pairs or small groups.
+1
+coyote
+inhabited
+bison, pronghorn, elk, and other deer, doing particularly well in short-grass areas with prairie dogs, though it was just as much at home in semiarid areas with sagebrush and jackrabbits or in deserts inhabited by cactus, kangaroo rats, and rattlesnakes.
+gray wolf
+habitat generalist
+deserts, grasslands, forests and arctic tundras. 
+0
+Coyote
+features
+folktales of some Native Americans in the United States, notably several nations in the Southwestern and Plains regions,
+wolf
+common motif
+foundational mythologies and cosmologies of peoples throughout Eurasia and North America
+0
+wolves
+react to humans
+olves lacking any negative experience of humans, or which are food-conditioned, may show little fear of people
+Coyote
+attacks
+humans are uncommon and rarely cause serious injuries, due to the relatively small size of the coyote, but have been increasingly frequent, especially in California.
+1
+litters
+killing
+in their dens, coursing with dogs (usually combinations fo sighthounds, bloodhounds and fox terriers), poisoning with strychnine, and trapping.
+coyotes
+eaten
+trappers and mountain men during the western expansion.
+0
+Lobsters
+caught
+baited one-way traps with a colour-coded marker buoy to mark cages
+locusts
+considered
+delicacy and eaten in many African, Middle Eastern, and Asian countries
+0
+snow leopard
+carnivore
+hunts its prey
+jaguar
+obligate carnivore
+feeding only on meat.
+1
+Its
+features
+body is stocky, its fur is thick, and its ears are small and rounded,
+jaguar
+adept
+climbing, crawling, and swimming.
+1
+sparrows
+are
+small, plump, brown and grey birds with short tails and stubby, powerful beaks
+Owls
+possess
+large, forward-facing wyes and ear-holes, a hawk-like beak, a flat face, and usually a conspicuous circle of feathers, a facial disc, around each eye. 
+1
+Peafowl
+eat
+plant parts, flower petals, seed heads, insects and other arthropods, reptiles, and amphibians.
+parrots
+diet
+seeds, fruit, nectar, pollen, buds, and sometimes arthropods and other animal prey.
+1
+Ancient Greeks
+believed
+flesh of peafowl did not decay after death, so it became a symbol of immortality
+They
+have
+long history of pets, stertching bakc thousands of years, and wer oftehn kept as a symbol of royalty or wealth.
+0
+peafowl
+known
+piercing call and their extrvagant plumage.
+parrots
+characteristic features
+strong, curved bill, an upright stance, strong legs, and clawed zygodactyl feet.
+1
+Ponies
+described
+stubborn or currning.
+donkey
+been used
+as a working animal for at least 500 years.
+0
+Pony
+breeds
+articularly in cold and harsh climates where hardy, sturdy working animals were needed.
+Donkeys
+adapeted
+marginal desert lands
+0
+Hackney pony
+used for
+driving, while other breeds, such as the Connemara pony and Australian Pony, are used primarily for riding.
+donkeys
+are
+96% are in underdeveloped countries, where they are used principally as pack animals or for draught work in transport or agriculture.
+1
+Llamas
+live 
+for 15 to 25 years, with some indivisuals surviving 30 years or more.
+camel
+life expectancy
+40-50 years
+1
+zebra
+about
+1.2–1.3 m (47–51 in) at the shoulder with a body ranging from 2–2.6 m (6.6–8.5 ft) long with a 0.5 m (20 in) tail.
+horses
+range
+height from 14 to 16 hands and can weigh from 380 to 550 kilograms
+1
+zebra
+eyes
+are on the sides of its head, giving it a wide field of view.
+They
+largest eyes 
+lateral-eyed, meaning that their eyes are positioned on the sides of their heads.
+1
+Zebras
+hearing
+larger, rounder ears than horses.
+horse
+hearing
+pinna of each ear can rotate up to 180°, giving the potential for 360° hearing without having to move the head.
+0
+shrimp
+refer
+some decapod crustaceans,although the exact animals covered can vary.
+Prawn
+common name 
+aquatic crustaceans with an exoskeleton and ten legs (i.e. a member of the order decapoda), some of which can be eaten.
+0
+Kangaroo rats
+are
+seed eaters.
+dark kangaroo mouse
+also known
+feed occasionally on insects and carrion.
+0
+baboons
+live
+in hierarchical troops.
+Gorillas
+have
+patchy distribution.
+0
