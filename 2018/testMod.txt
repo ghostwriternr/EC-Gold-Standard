@@ -1,3 +1,101 @@
+ches
+use pheromones
+and the males practice courtship rituals, such as posturing and stridulation.
+scorpions
+reproduce
+and most species have male and female individuals. 
+0
+scorprions
+sexual reproduction
+transfer of a spermatophore from the male to the female
+cockroaches
+mate
+facing away from each other with their genitalia in contact, and copulation can be prolonged
+0
+cockroaches
+eaten
+in many places around the world.
+scorpion
+traditional dish
+from Shandong, China. Scorpion and snake wines are used as analgesics.
+1
+american bison
+lives
+river valleys, and on prairies and plains.
+it
+lives
+swamps and floodplains, as well as mopane grasslands and forests of the major mountains of Africa.
+1
+buffalo
+habitat
+dense cover, such as reeds and thickets, but can also be found in open woodland
+they
+graze
+hilly or mountainous areas where the slopes are not steep.
+0
+european bison
+live
+lightly wooded to fully wooded areas and areas with increased shrubs and bushes, though they can also live on grasslands and plains.
+they
+require
+water daily, so depend on perennial sources of water
+0
+african cape buffaloes
+predators
+capable of defending themselves against (and killing) lions.
+bison
+predators
+Four notable exceptions are humans, the grey wolf, brown bear, and coyote
+1
+cape buffalo
+susceptible to many diseases
+including bovine tuberculosis, corridor disease, and foot and mouth disease.
+american bison, 
+illness
+the main cause of illness is malignant catarrhal fever,
+0
+species
+herds
+made up of related females, and their offspring, in an almost linear dominance hierarchy. 
+species
+hunting by rail
+trains encountered large herds alongside or crossing the tracks. 
+0
+bats
+flight
+become one of the most widely distributed groups of mammals
+bees
+polylectic
+collect pollen from a range of flowering plants, 
+0
+bats
+predation
+from birds of prey, such as owls, hawks, and falcons, and at roosts from terrestrial predators able to climb, such as cats
+bees
+vertebrate predators
+bee-eaters, shrikes and flycatchers, which make short sallies to catch insects in flight.
+1
+species
+eat
+predators such as the badger dig up bumblebee nests and eat both the larvae and any stored food
+species
+capture
+bats, often waiting at the entrances of refuges, such as caves, for bats to fly past
+0
+honey bees
+affected
+parasites including acarine and Varroa mites
+they
+highly resistant
+pathogens they carry, suggesting a degree of adaptation to their immune systems
+0
+honey bees
+kept
+commonly in hives, for millennia.
+people
+put
+bat houses to attract bats
+0
 snakes
 carnivorous
 eating small animals including lizards, frogs, other snakes, small mammals, birds, eggs, fish, snails or insects.
@@ -82,31 +180,3 @@ dolphin
 gestation period
 this period is around 11 to 12 months, with for the orca the gestation period is around 17 months.
 1
-goats
-shapes and sizes
-naturally have two horns
-sheep
-color
-compared to wild ovines is their wide variation in color.
-0
-Skunk
-predators
-of the honeybee, relying on their thick fur to protect them from stings.
-sloths
-spend
-bulk of their time feeding on a single "modal" tree
-0
-Vultures
-attack
-rarely attack healthy animals, but may kill the wounded or sick.
-eagles
-living
-relatively arid regions still typically rely primarily on fish as prey.
-0
-Arctic wolf
-people
-can be coaxed to approach people in some areas.
-Arctic fox
-curls up
-tucking its legs and head under its body and behind its furry tail.
-0

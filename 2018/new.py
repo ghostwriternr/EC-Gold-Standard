@@ -1,4 +1,5 @@
 import os
+import sys
 import json
 import re
 from math import log
@@ -6,11 +7,19 @@ from nltk import word_tokenize, pos_tag
 from nltk.corpus import wordnet as wn
 from itertools import zip_longest
 import numpy as np
+import spacy
+
+nlp = spacy.load("en")
 
 DIRECTORIES = [
     '/home/ghost_000/github/EC-Gold-Standard/data/wikiContent/animalsJson',
     '/home/ghost_000/github/EC-Gold-Standard/data/wikiContent/plantsJson'
 ]
+
+def get_spacy(sentence1, sentence2):
+    s1 = nlp(sentence1)
+    s2 = nlp(sentence2)
+    return s1.similarity(s2)
 
 def split_sentences(data_json):
     all_sentences = ''
@@ -21,6 +30,24 @@ def split_sentences(data_json):
         sentence = sentence.strip()
         sentence = sentence.replace('\n', '')
     return sentence_list
+
+def getlca(sentence):
+    sentence = pos_tag(word_tokenize(sentence))
+    synsets = [tagged_to_synset(*tagged_word) for tagged_word in sentence]
+    synsets = [ss for ss in synsets if ss]
+    if not synsets:
+        return wn.synset('entity.n.01')
+    val1 = synsets[0]
+    lca = val1
+    for val in synsets[1:]:
+        try:
+            lca = val1.lowest_common_hypernyms(val)[0]
+            if lca == wn.synset('entity.n.01'):
+                return lca
+            val1 = lca
+        except IndexError:
+            return wn.synset('entity.n.01')
+    return lca
 
 def getcooccurence(str1, str2, sentence_list, scores, filename):
     # if 'Dog.json' in filename or 'Cat.json' in filename:
@@ -176,11 +203,16 @@ def val_similarity(list1, list2):
 
 def get_list_pmi(asp_list, val_list):
     avg_pmi = 0
+    max_pmi = 0
+    min_pmi = sys.maxsize
     for aspect in asp_list:
         for val in val_list:
-            avg_pmi += getpmi(aspect, val)
+            val_pmi = getpmi(aspect, val)
+            avg_pmi += val_pmi
+            max_pmi = max(max_pmi, val_pmi)
+            min_pmi = min(min_pmi, val_pmi)
     avg_pmi = avg_pmi / (len(val_list)*len(asp_list))
-    return(avg_pmi)
+    return(avg_pmi, max_pmi, min_pmi)
 
 def parse_file(filename, num_lines=7):
     final_array = []
@@ -196,11 +228,18 @@ def parse_file(filename, num_lines=7):
             max_sim, avg_sim = val_similarity(sentence1.vlist, sentence2.vlist)
             # print(max_sim)
             # print(avg_sim)
-            avg_pmi1 = get_list_pmi(sentence1.alist, sentence1.vlist)
+            avg_pmi1, max_pmi1, min_pmi1 = get_list_pmi(sentence1.alist, sentence1.vlist)
             # print(avg_pmi1)
-            avg_pmi2 = get_list_pmi(sentence2.alist, sentence2.vlist)
+            avg_pmi2, max_pmi2, min_pmi2 = get_list_pmi(sentence2.alist, sentence2.vlist)
             # print(avg_pmi2)
-            pair_array = [aspect_similarity, max_sim, avg_sim, avg_pmi1, avg_pmi2]
+            #spacy_aspect_sim = get_spacy(sentence1.a, sentence2.a)
+            #spacy_val_sim = get_spacy(sentence1.v, sentence2.v)
+            common_lca1 = getlca(sentence1.v)
+            avg_lca_pmi1 = get_list_pmi(sentence1.alist, [common_lca1.lemma_names()[0]])
+            common_lca2 = getlca(sentence2.v)
+            avg_lca_pmi2 = get_list_pmi(sentence2.alist, [common_lca2.lemma_names()[0]])
+            #pair_array = [aspect_similarity, max_sim, avg_sim, avg_pmi1, avg_pmi2, spacy_aspect_sim, spacy_val_sim]
+            pair_array = [aspect_similarity, max_sim, avg_sim, avg_pmi1, max_pmi1, min_pmi1, avg_pmi2, max_pmi2, min_pmi2]
             result_array.append(int(lines[6].strip()))
             print("pair_array", pair_array)
             # input()
@@ -208,9 +247,9 @@ def parse_file(filename, num_lines=7):
     return np.array(final_array), np.array(result_array)
 
 def main():
-    np_array, res_array = parse_file('testMod.txt')
-    np.save("test_array", np_array)
-    np.save("test_res_array", res_array)
+    np_array, res_array = parse_file('trainDataMod.txt')
+    np.save("train_array_2", np_array)
+    np.save("train_res_array_2", res_array)
     print(np_array)
 
 if __name__ == "__main__":
